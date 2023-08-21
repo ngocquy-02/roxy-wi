@@ -828,7 +828,7 @@ def update_db_v_6_3_13_4():
 def update_db_v_6_3_13_5():
 	try:
 		SMON.update(check_type='http').where(SMON.http != '').execute()
-	except Exception:
+	except Exception as e:
 		print("An error occurred:", e)
 
 
